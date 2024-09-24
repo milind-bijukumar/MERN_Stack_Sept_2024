@@ -1,1 +1,3 @@
-# MERN_Stack_Sept_2024
+# Refer the notes
+
+For your reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
