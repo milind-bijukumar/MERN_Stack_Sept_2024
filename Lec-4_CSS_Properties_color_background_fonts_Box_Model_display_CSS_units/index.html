@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS properties and Box Model</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      :root {
+        font-size: 16px;
+      }
+
+      h1 {
+        color: #c43f3f;
+        background-color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: 900;
+        text-align: justify;
+        text-transform: uppercase;
+        text-indent: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+        /* margin: 20px 0; TRBL */
+        margin: 20px 0 10px 0;
+        display: inline-block;
+      }
+
+      h2 {
+        margin: 20px 0;
+      }
+
+      .box {
+        border: 3px solid rgb(70, 60, 60);
+        border-radius: 5px;
+        padding: 40px;
+        margin: 50px;
+        /* height: 120px; */
+        height: auto;
+        width: 100%;
+        overflow: auto;
+      }
+
+      .box-1 {
+        background-color: aliceblue;
+        /* box-sizing: content-box; */
+        font-size: 2rem;
+        background-image: url("./assets/images/foodiesfeed.com_pizza-ready-for-baking.jpg");
+        /* background-repeat: repeat;
+        background-position: fixed; */
+        color: white;
+      }
+
+      .box-2 {
+        background-color: yellow;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Welcome in the world of CSS Properties. Welcome in the world of CSS
+      Properties. Welcome in the world of CSS Properties.Welcome in the world of
+      CSS Properties. Welcome in the world of CSS Properties.Welcome in the
+      world of CSS Properties
+    </h1>
+    <h2>It's really awesome properties for decorating the text</h2>
+
+    <div class="box box-1">
+      <p>
+        Welcome in the world of CSS Properties. Welcome in the world of CSS
+        Properties. Welcome in the world of CSS Properties.Welcome in the world
+        of CSS Properties. Welcome in the world of CSS Properties.Welcome in the
+        world of CSS Properties
+      </p>
+    </div>
+
+    <div class="box box-2">
+      <p>
+        Welcome in the world of CSS Properties. Welcome in the world of CSS
+        Properties. Welcome in the world of CSS Properties.Welcome in the world
+        of CSS Properties. Welcome in the world of CSS Properties.Welcome in the
+        world of CSS Properties
+      </p>
+    </div>
+  </body>
+</html>
