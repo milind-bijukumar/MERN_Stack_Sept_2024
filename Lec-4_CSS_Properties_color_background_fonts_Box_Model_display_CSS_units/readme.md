@@ -78,3 +78,13 @@ extrinsic size: if explicity mention the height and width of the content or box.
     EM: value wrt to immediate parent element.
 
     REM: value wrt to root element(html, :root)
+
+# Best practices:
+
+1. px is used when you need fixed size content and can also be used for building fixed size boxes(height, width, border, margin, padding)
+
+2. for RWD or fluid layouts: use % for the width and height
+
+3. if % is not helping us for adjusting the contnet in RWD, use VW and VH.
+
+4. em and rem - preferred to use the rem for the font-size
