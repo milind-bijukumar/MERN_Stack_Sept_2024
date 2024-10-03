@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexible Layout Example</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        background-color: aquamarine;
+        height: 80px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+        margin: 0;
+        line-height: 75px;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background-color: aqua;
+      }
+
+      section {
+        display: flex;
+        align-items: stretch;
+        padding: 10px;
+        flex-wrap: wrap;
+        /* gap: 20px; */
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        article {
+          flex: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        article {
+          flex: 1 1 calc(50% - 16px);
+        }
+      }
+
+      @media screen and (min-width: 1025px) and (max-width: 1200px) {
+        article {
+          flex: 1 1 calc(25% - 10px);
+        }
+      }
+
+      /* article {
+        flex: 1 1 calc(25% - 10px);
+      } */
+
+      .box-1 {
+        order: 3;
+      }
+
+      .box-2 {
+        order: 1;
+      }
+
+      .box-3 {
+        order: 2;
+      }
+
+      .box {
+        border: 1px solid red;
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+        margin: 40px;
+        border-radius: 50%;
+      }
+
+      span {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Flexible Layout Layout</h1>
+    </header>
+
+    <section>
+      <article class="box-1">
+        <h2>First Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="box-2">
+        <h2>Second Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="box-3">
+        <h2>Third Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article>
+        <h2>Fourth Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article>
+        <h2>Fourth Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article>
+        <h2>Fourth Article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+    </section>
+
+    <div class="box">
+      <span>1</span>
+    </div>
+  </body>
+</html>
