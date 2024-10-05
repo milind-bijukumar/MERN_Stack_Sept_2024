@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Predefined Layout Example</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 20px;
+        font-family: "Times New Roman", Times, serif;
+
+        display: grid;
+
+        grid-template-areas:
+          "top top top top"
+          "navbar . content sidebar"
+          "footer footer footer footer";
+
+        gap: 10px;
+        /* margin: 20px; */
+      }
+
+      header {
+        background-color: aquamarine;
+        padding: 10px;
+        grid-area: top;
+        height: 60px;
+        text-align: center;
+      }
+
+      nav {
+        grid-area: navbar;
+        height: 100vh;
+        background-color: grey;
+        grid-template-columns: 200px;
+        grid-template-rows: 200px;
+      }
+
+      main {
+        grid-area: content;
+        background-color: aquamarine;
+        height: 100vh;
+      }
+
+      aside {
+        grid-area: sidebar;
+        background-color: blanchedalmond;
+        height: 100vh;
+      }
+
+      footer {
+        grid-area: footer;
+        height: 100px;
+        background-color: aliceblue;
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        body {
+          display: grid;
+
+          grid-template-areas:
+            "top"
+            "navbar"
+            "content"
+            "sidebar"
+            "footer ";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <nav>Navbar</nav>
+    <main>
+      <h2>My heading</h2>
+      <div>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </div>
+    </main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </body>
+</html>
