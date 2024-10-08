@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning in CSS</title>
+    <style>
+      .bookshelf {
+        position: relative;
+        border: 1px solid green;
+        padding: 20px;
+        margin: 20px;
+        background-color: azure;
+        height: 2000px;
+        left: 20px;
+        bottom: 30px;
+        left: 50px;
+      }
+
+      .book {
+        /* display: flex; */
+        position: absolute;
+        width: 100px;
+        padding: 10px;
+        height: 100px;
+        /* border: 1px solid red; */
+      }
+
+      .book-1 {
+        background-color: aqua;
+        left: 100px;
+        top: 20px;
+        right: 30px;
+        bottom: 40px;
+      }
+
+      .book-2 {
+        position: fixed;
+        background-color: bisque;
+        left: 40px;
+        top: 40px;
+        right: 60px;
+        bottom: 80px;
+      }
+
+      .book-3 {
+        background-color: bisque;
+        left: 80px;
+        top: 80px;
+        right: 120px;
+        bottom: 160px;
+      }
+
+      .book-4 {
+        position: sticky;
+        background-color: bisque;
+        left: 160px;
+        top: 0;
+        right: 180px;
+        bottom: 180px;
+      }
+
+      .book-2:hover {
+        background-color: blue;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bookshelf">
+      <div class="book book-1">book 1</div>
+      <div class="book book-2">book 2</div>
+      <div class="book book-3">book 3</div>
+      <div class="book book-4">book 4</div>
+    </div>
+  </body>
+</html>
