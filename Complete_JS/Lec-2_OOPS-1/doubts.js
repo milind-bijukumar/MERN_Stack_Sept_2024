@@ -5,3 +5,8 @@ function abc() {
   //let a = 10;
 }
 abc();
+
+let a; // declaration and get the undefined
+a = 10; // intialisation
+
+console.log(b);
