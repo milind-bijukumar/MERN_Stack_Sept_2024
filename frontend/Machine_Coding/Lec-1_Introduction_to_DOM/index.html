@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to DOM</title>
+    <style>
+      .hidden-content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading" id="heading">Inroduction to DOM</h1>
+
+    <h1 class="heading">Hey i am another h1 heading</h1>
+
+    <!-- <h2> Hey i am h2 content </h2> -->
+
+    <p class="text" id="text-id">
+      <span class="hidden-content">Hidden content for non-visual user</span>
+      <span>We are going to learn about DOM and Its API</span>
+    </p>
+
+    <div id="dynamic-content"></div>
+
+    <script>
+      // to read the p element
+
+      // const pElem = document.querySelector("p");
+      const pElem = document.querySelector(".text");
+      console.log(pElem);
+
+      const pElemContent = pElem.textContent;
+      console.log(pElemContent);
+
+      const pElmById = document.querySelector("#text-id");
+      console.log(pElmById);
+
+      const h1Elem = document.querySelector("h1");
+
+      console.log(h1Elem);
+
+      const h1ElemById = document.getElementById("heading");
+      console.log(h1ElemById);
+
+      const allH1s = document.querySelectorAll("h1");
+      console.log(allH1s);
+
+      const allH1sByClasses = document.getElementsByClassName("heading");
+      console.log(allH1sByClasses);
+
+      const allH1ByTags = document.getElementsByTagName("h1");
+      console.log(allH1ByTags);
+
+      const h2Elem = document.createElement("h2");
+      console.log(h2Elem);
+
+      h2Elem.innerText = "Hey i am h2 content";
+
+      // const body = document.querySelector('body');
+      // body.appendChild(h2Elem);
+
+      const divElem = document.getElementById("dynamic-content");
+      divElem.appendChild(h2Elem);
+
+      // delete element
+      h2Elem.remove();
+
+      // remove a particular child elemnent from a container/parent element
+
+      const child = document.querySelector(".hidden-content");
+
+      // console.log(child);
+
+      // pElem.removeChild(child);
+
+      // console.log(pElem);
+
+      child.remove();
+      console.log(pElem);
+    </script>
+    <script src="3_Node_its_properties.js"></script>
+  </body>
+</html>
