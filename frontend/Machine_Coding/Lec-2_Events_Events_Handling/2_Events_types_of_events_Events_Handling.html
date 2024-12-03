@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events and Events Handling</title>
+  </head>
+  <body>
+    <!--
+        What is an event?
+
+           - An event is an action take place within the web page.
+
+        How many types events do wehave in DOM?
+
+          List of Event name:
+
+           1. Mouse Events Name:
+              1. click
+              2. dbclick
+              3. mouseover
+              4. mouseout
+              5. mouseleave
+              6. mouseneter
+              7. mousedown
+              8. mouseup
+            
+            2. Keyboard Events Name:
+
+              1. keypress
+              2. keydown
+              3. keyup
+
+            3. Form events:
+
+              1. submit
+              2. reset
+              3. change
+              4. input
+              5. focus
+              6. blur
+              7. select
+
+            4. Focus events:
+
+               1. focus
+               2. blur
+               3. focusin
+               4. focusout
+
+            5. Window events
+
+               1. resize
+               2. scroll
+               3. load
+               4. unload
+
+        3. How to handle the event?
+
+            - There are 2 ways to handle the events
+
+               1. Inline events handling:
+
+                   - you can directly use the event using 'on' as attribute just before the event name inside the HTML elements.
+
+               2. DOM Event Listener Methods:
+
+                   - A modern and the recommended approach to add the events in HTML element.
+
+                   - element.addEventListener(eventname, listener(callback), options)
+                   - element.removeEventListener(eventname, listener(callback), options)
+
+
+-->
+
+    <!-- <button id="btn-click" onclick="handleClick()">Click here</button> -->
+
+    <button id="btn-click">Click here</button>
+
+    <div id="username-text"></div>
+
+    <script>
+      const btnElem = document.getElementById("btn-click");
+      const username = "Ashwani Rajput";
+
+      const handleClick = () => {
+        const p = document.createElement("p");
+        p.innerText = `Welcome, ${username}`;
+
+        // const body = document.querySelector('body');
+        const divElem = document.getElementById("username-text");
+        divElem.appendChild(p);
+
+        btnElem.removeEventListener("click", handleClick);
+      };
+
+      btnElem.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

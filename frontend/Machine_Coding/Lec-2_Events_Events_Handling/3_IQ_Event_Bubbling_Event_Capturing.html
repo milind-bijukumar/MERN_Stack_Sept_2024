@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubbling and Event Capturing</title>
+  </head>
+  <body>
+    <!--
+
+   Event Bubbling:
+     - it's default behavior in the DOM whenever there is an event triggered then it will propagate from the target element to its ancesator element (till the root element -> html)
+     - it propagates from bottom to top.
+
+
+   Event Capturing:
+
+    - Event capturing is less commonly used and you have to registerthe capturing event explicitly.
+
+    - it propagates the vent from top to bottom
+-->
+
+    click body element
+
+    <div id="outer">
+      click the outer
+
+      <div id="inner" style="color: red">clcik the inner</div>
+      <div id="inner-1" style="color: green">clcik the inner-1</div>
+    </div>
+
+    <div>
+      <form id="registeration-form">
+        <label>Username:</label>
+        <input placeholder="enter user name" />
+
+        <button>Sign up</button>
+      </form>
+    </div>
+
+    <script>
+      const innerEl = document.getElementById("inner");
+      const outerEl = document.getElementById("outer");
+      const bodyEl = document.querySelector("body");
+
+      innerEl.addEventListener(
+        "click",
+        (e) => {
+          console.log("inner has been clicked");
+          e.stopPropagation();
+        },
+        true
+      );
+
+      outerEl.addEventListener(
+        "click",
+        (e) => {
+          console.log("outer has been also clicked");
+          e.stopPropagation();
+        },
+        true
+      );
+
+      bodyEl.addEventListener(
+        "click",
+        (e) => {
+          console.log("body has been also triggered");
+          e.stopPropagation();
+        },
+        true
+      );
+
+      /**
+            Thumb rule: Always use Event bubbling and try handle to it.
+
+              1. Use Event bubbling, because it give s the sense of triggereting which current element is going to be trgirred?
+
+              2. try to avoid to use event capturing because it may leads to confusion
+      */
+    </script>
+  </body>
+</html>

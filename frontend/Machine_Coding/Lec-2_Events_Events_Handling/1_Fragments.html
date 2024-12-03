@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragment</title>
+  </head>
+  <body>
+    <!--
+       What is fragment?
+
+         - It's light weight container that can hold multiple DOM nodes.
+         - It's a not part of DOM document tree that improves the web performance when you manipulationg multiple noes at once.
+         - How to create a fragment in JS?
+
+            - document.createDocumentFragment();
+        
+   -->
+
+    <ul id="myList"></ul>
+
+    <script>
+      const ulElem = document.querySelector("#myList");
+      const fragment = document.createDocumentFragment();
+      //in react -> <> </>
+
+      for (let i = 0; i < 1000; i++) {
+        const li = document.createElement("li");
+        li.innerText = `Item-${i}`;
+        fragment.appendChild(li);
+      }
+
+      console.log(fragment);
+      ulElem.appendChild(fragment);
+    </script>
+  </body>
+</html>
