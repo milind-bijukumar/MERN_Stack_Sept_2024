@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <input
+        id="firstName"
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+      />
+      <input
+        id="lastName"
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+      />
+      <input id="email" type="email" name="email" placeholder="Email" />
+      <input
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+
+      <button>Submit</button>
+    </form>
+    <script>
+      const formElem = document.getElementById("userForm");
+      formElem.addEventListener("submit", (event) => {
+        console.log(event);
+        event.preventDefault();
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

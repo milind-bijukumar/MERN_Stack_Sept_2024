@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+  </head>
+  <body>
+    <!--
+   
+      Event Delegation:
+
+        - It's a technique in JS to handle the events for multiple child elements using a single listener on a parent element.
+
+        - Instead of adding events on each child elements, leveraging event bubbling to capture the events.
+   -->
+
+    <div>
+      <ul id="listItems">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+
+    <script>
+      const ulElem = document.getElementById("listItems");
+
+      ulElem.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        if (event.target.tagName === "LI") {
+          console.log("Clicked on", event.target.textContent);
+        }
+      });
+    </script>
+  </body>
+</html>

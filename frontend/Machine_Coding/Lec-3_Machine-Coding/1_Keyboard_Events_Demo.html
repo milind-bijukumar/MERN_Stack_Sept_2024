@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <input
+        id="firstName"
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+      />
+      <input
+        id="lastName"
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+      />
+      <input id="email" type="email" name="email" placeholder="Email" />
+      <input
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+    </form>
+
+    <script>
+      // write your logic here
+      // const fName = document.getElementById("firstName");
+      // const lName = document.getElementById("lastName");
+      // const email = document.getElementById("email");
+      // const passowrd = document.getElementById("password");
+      // // console.log(fName);
+
+      // fName.addEventListener("input", (e) => {
+      //   console.log(e.target.value);
+      // });
+
+      // lName.addEventListener("input", (e) => {
+      //   console.log(e.target.value);
+      // });
+      // email.addEventListener("input", (e) => {
+      //   console.log(e.target.value);
+      // });
+
+      // password.addEventListener("input", (e) => {
+      //   console.log(e.target.value);
+      // });
+
+      const formElem = document.getElementById("userForm");
+
+      formElem.addEventListener("input", (event) => {
+        event.stopPropagation();
+
+        const target = event.target;
+
+        if (target.name === "firstName") {
+          console.log("First name field value: ", target.value);
+        } else if (target.name === "lastName") {
+          console.log("Last name field value: ", target.value);
+        } else if (target.name === "email") {
+          console.log("Email  field value: ", target.value);
+        } else if (target.name === "password") {
+          console.log("Password field value: ", target.value);
+        }
+      });
+    </script>
+  </body>
+</html>
