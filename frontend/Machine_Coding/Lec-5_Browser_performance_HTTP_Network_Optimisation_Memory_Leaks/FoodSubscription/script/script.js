@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   let link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "./css/fs-styles.css";
+  link.href = "./css/fs-styles-min.css";
 
   document.head.appendChild(link);
+  // if(thridParty){
+  //   // write your logic
+  // }
 });

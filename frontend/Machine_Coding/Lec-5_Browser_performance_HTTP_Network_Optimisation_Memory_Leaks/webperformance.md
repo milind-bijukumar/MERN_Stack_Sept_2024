@@ -106,6 +106,43 @@
 
   - How to use it?
 
-     <script defer async src="https://example.com/vendor-scrtpt.js"></script>
+    <script defer async src="https://example.com/vendor-scrtpt.js"></script>
 
-  - async vs defer
+  - async vs defer - refers the note.
+
+  # Memory Leak Problems:
+
+  1.  Global variables:
+
+      - It may pollute the variables globally (modifed via functions).
+      - try to avoid using global variables. create a function or modules so that scope of variables you limited under a function or under module.
+
+  2.  closure and scope:
+
+      - Processing a large amount of data via closure, so handle it carefully
+      - Eg: data = { large data } -> de-reference it -> data = null;
+
+  3.  Handling the events:
+
+      - Attach events via addEventListener('eventname', ()=>{
+        // logic
+        })
+
+      - Detach the events via removeEventListener('sameeventname', ()=>{
+        // call the function
+        })
+
+  4.  setInterval():
+
+      - retuns the timerId
+      - clearInterval()
+      - timerId = null;
+
+  5.  promises:
+
+      - custom promises -> via new Promise((resolve, reject)=>{}) -> there might be a possibilty you created the but you forget to consume then this create a memory leak problem
+
+      - you have to consume the promise:
+
+        - then, catch, finally
+        - async/await
