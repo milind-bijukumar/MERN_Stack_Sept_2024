@@ -2,14 +2,14 @@
 
     typeahed system/search:
 
-       - to build auto suggestion, it help th end to take a certain decision quickly
+       - to build auto suggestion, it helps the user to selcet a text and take a certain decision quickly.
 
     
     Must have feature:
 
       - input search box - via input field tag
       - make a API call to fetch the dynamic data
-      - create a dynmaic li and insert the dynamic data after fetching the data.
+      - create a dynamic li and insert the dynamic data after fetching the data.
       - append the data in ul tag
 
      Good have feattures:
@@ -20,6 +20,7 @@
  */
 
 import { getCountries } from "./utils/fetchData.js";
+import { debounce } from "./utils/debounce.js";
 
 const populateData = (countryArr) => {
   const resultCont = document.getElementById("results");
@@ -39,6 +40,7 @@ const populateData = (countryArr) => {
       fragment.appendChild(resultItem);
     });
 
+    resultCont.innerHTML = "";
     resultCont.appendChild(fragment);
   }
 };
@@ -49,7 +51,7 @@ const handleSearch = (countries) => {
   });
 };
 
-const handleSuggestions = async (event, resultCont, searchInput) => {
+const handleSuggestions = async (event) => {
   const keyword = event.target.value;
 
   if (!keyword.length) return;
@@ -58,13 +60,16 @@ const handleSuggestions = async (event, resultCont, searchInput) => {
 
   const countryArr = handleSearch(countries);
 
-  populateData(countryArr, resultCont, searchInput);
+  populateData(countryArr);
 };
 
 const inititialiseTypeaheadSystem = () => {
   const searchInput = document.getElementById("searchInput");
 
-  searchInput.addEventListener("input", handleSuggestions);
+  const debounceSuggestions = debounce((event) => {
+    handleSuggestions(event);
+  }, 500);
+  searchInput.addEventListener("input", debounceSuggestions);
 };
 
 inititialiseTypeaheadSystem();
