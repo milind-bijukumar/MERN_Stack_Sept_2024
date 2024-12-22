@@ -27,3 +27,22 @@
 
 
  */
+
+/***
+
+   Web accessibility:
+
+     - the content of the web has to be accessible by everyone.(physical disabled persons as well)
+
+     - tools you can use as:
+        1. Lighthouse
+        2. Screen reader software used by disabled people to read the text.
+
+
+     - Take care during your development phase:
+
+       - for icons -> use button HTML and try to use semantic elements.
+       - image -> use alt attrbute inside the <img  alt=""/> to understand about the image to be presented.
+       - tabIndex='0'/'-1' is useful for unsemantic elements and access by the tab.
+       - aria-label or aria-* attributes you can inside any HTML element.
+ */

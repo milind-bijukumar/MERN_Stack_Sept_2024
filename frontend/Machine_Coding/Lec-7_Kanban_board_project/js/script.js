@@ -191,7 +191,6 @@ const initKanbanBoard = () => {
 
   //Assignmnets:
   /**
-   
       1. Filtering or grouping the tickets based on priority of the tickets
       2. Delete the tickets and update the localstorage as well
     */
