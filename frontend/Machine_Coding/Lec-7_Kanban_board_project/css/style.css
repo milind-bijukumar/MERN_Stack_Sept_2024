@@ -67,6 +67,7 @@
   align-items: center;
 }
 
+
 .add-btn,
 .remove-btn {
   font-size: 2.75rem;
@@ -74,7 +75,7 @@
 }
 
 .fa-plus,
-.fa-trash {
+.fa-trash, .fa-filter {
   font-size: 3rem;
   border: none;
   background-color: transparent;
@@ -229,4 +230,5 @@
 .priority-color {
   height: 3rem;
   width: 5rem;
+  /* border: none; */
 }
