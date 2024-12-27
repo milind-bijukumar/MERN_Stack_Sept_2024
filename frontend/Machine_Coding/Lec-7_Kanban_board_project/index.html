@@ -13,18 +13,22 @@
   <body>
     <section class="toolbox-cont">
       <div class="toolbox-priority-cont">
-        <div class="color red" tabindex="0"></div>
-        <div class="color blue" tabindex="-1"></div>
-        <div class="color green" tabindex="-1"></div>
-        <div class="color black" tabindex="-1"></div>
+        <button class="color red" aria-label="Set priority to red"></button>
+        <button class="color blue" aria-label="Set priority to blue" ></button>
+        <button class="color green" aria-label="Set priority to green" ></button>
+        <button class="color black" aria-label="Set priority to black"></button>
+         
       </div>
 
       <div class="actions-btn-cont">
         <div class="add-btn">
-          <button class="fa-solid fa-plus"></button>
+          <button class="fa-solid fa-plus" aria-label="Add item"></button>
         </div>
         <div class="remove-btn">
-          <i class="fa-solid fa-trash"></i>
+          <button class="fa-solid fa-trash" aria-label="Remove item"></button>
+        </div>
+        <div class="filter-btn">
+          <button class="fa-solid fa-filter" aria-label="Filter"></button>  
         </div>
       </div>
     </section>
@@ -38,8 +42,8 @@
             <div class="ticket-color red"></div>
             <div class="ticket-id">#1234</div>
             <div class="ticket-task">Learn HTML</div>
-            <div class="lock-unlock">
-              <i class="fa-solid fa-lock"></i>
+            <div class="lock-unlock" id="lock-unlock">
+              <button class="fa-solid fa-lock"></button>
             </div>
           </div> -->
         </div>
@@ -63,7 +67,7 @@
     <div class="modal-overlay">
       <div class="modal-content">
         <div class="modal-header">
-          <button class="modal-close-btn">
+          <button class="modal-close-btn" aria-label="Close modal">
             <i class="fa-solid fa-times-circle"></i>
           </button>
         </div>
@@ -71,12 +75,12 @@
           class="modal-textarea"
           placeholder="Enter your task"
         ></textarea>
-        <div class="priority-color-cont">
+        <div class="priority-color-cont" tabindex="-1">
           <button class="create-task">Create Task</button>
-          <div class="priority-color red active"></div>
-          <div class="priority-color blue"></div>
-          <div class="priority-color green"></div>
-          <div class="priority-color black"></div>
+          <button class="priority-color red active" aria-label="Set priority to red"></button>
+          <button class="priority-color blue" aria-label="Set priority to blue"></button>
+          <button class="priority-color green" aria-label="Set priority to green"></button>
+          <button class="priority-color black" aria-label="Set priority to black"></button>   
         </div>
       </div>
     </div>
@@ -88,3 +92,4 @@
     <script defer src="./js/script.js"></script>
   </body>
 </html>
+
