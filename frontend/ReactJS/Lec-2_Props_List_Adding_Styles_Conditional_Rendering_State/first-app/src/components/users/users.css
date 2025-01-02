@@ -1,0 +1,10 @@
+.user-item__details {
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+  background-color: azure;
+}
+
+user-item__details--modiefied {
+  background-color: orange;
+}
